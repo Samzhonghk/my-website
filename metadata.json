@@ -1,0 +1,11 @@
+{
+  "name": "AI Tech Portfolio & Blog",
+  "description": "A modern portfolio template for AI/IT developers featuring a built-in Gemini-powered marketing assistant to help generate content strategies.",
+  "avatar": "avatar.jpeg",
+  "socials": {
+    "github": "https://github.com/your-username",
+    "linkedin": "https://linkedin.com/in/your-username",
+    "twitter": "https://twitter.com/your-username"
+  },
+  "requestFramePermissions": []
+}
