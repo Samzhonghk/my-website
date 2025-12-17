@@ -19,17 +19,35 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onBack, socials }) => 
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+    
+    // TODO: Replace 'YOUR_FORMSPREE_ID' with your actual Form ID from https://formspree.io/
+    // Example: https://formspree.io/f/xxyyzz
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwpgjpal';
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formState)
+      });
+
+      if (response.ok) {
+        setIsSent(true);
+        setFormState({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setIsSent(false), 5000);
+      } else {
+        alert("Oops! There was a problem submitting your form");
+      }
+    } catch (error) {
+      alert("Oops! There was a problem submitting your form");
+    } finally {
       setIsSubmitting(false);
-      setIsSent(true);
-      setFormState({ name: '', email: '', subject: '', message: '' });
-      // Reset success message after 5 seconds
-      setTimeout(() => setIsSent(false), 5000);
-    }, 1500);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
