@@ -8,7 +8,7 @@ export const projects: Project[] = [
     title: 'Small Loan Management System',
     description: 'A web-based application for managing loan applications, client records, and approval workflows. Features a secure login system and dashboard.',
     techStack: ['HTML/CSS', 'JavaScript', 'Vercel'],
-    imageUrl: '/loan-system.png',
+    imageUrl: './loan-system.png',
     demoUrl: 'https://smallloansystem-4kb5bgg2k-maxwells-projects-3bacae9d.vercel.app/login.html',
     repoUrl: '#'
   },
