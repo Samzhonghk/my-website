@@ -4,6 +4,15 @@ import { ExternalLink, Github, Code2 } from 'lucide-react';
 
 export const projects: Project[] = [
   {
+    id: 'loan-system',
+    title: 'Small Loan Management System',
+    description: 'A web-based application for managing loan applications, client records, and approval workflows. Features a secure login system and dashboard.',
+    techStack: ['HTML/CSS', 'JavaScript', 'Vercel'],
+    imageUrl: '/loan-system.png',
+    demoUrl: 'https://smallloansystem-4kb5bgg2k-maxwells-projects-3bacae9d.vercel.app/login.html',
+    repoUrl: '#'
+  },
+  {
     id: '1',
     title: 'AI Code Assistant',
     description: 'A VS Code extension that uses Gemini Pro to provide real-time code suggestions and refactoring tips directly in your editor.',
