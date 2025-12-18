@@ -4,6 +4,15 @@ import { ExternalLink, Github, Code2 } from 'lucide-react';
 
 export const projects: Project[] = [
   {
+    id: 'herbal-pharmacy',
+    title: 'Herbal Pharmacy Management System',
+    description: 'A comprehensive system for managing herbal pharmacy inventory, sales, and customer records. Streamlines daily operations and tracking.',
+    techStack: ['React', 'Vercel', 'Web App'],
+    imageUrl: './herbal-pharmacy.png', // 建议替换为你的项目截图
+    demoUrl: 'https://herbal-pharmacy-management.vercel.app/',
+    repoUrl: '#'
+  },
+  {
     id: 'loan-system',
     title: 'Small Loan Management System',
     description: 'A web-based application for managing loan applications, client records, and approval workflows. Features a secure login system and dashboard.',
